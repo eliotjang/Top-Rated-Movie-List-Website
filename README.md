@@ -1,5 +1,9 @@
 ## Top Rated Movie List website
 
+### Website Link
+
+- [Top Rated Movie List link](https://eliotjang.github.io/Top-Rated-Movie-List-Website/)
+
 ### Key Features
 
 - Use Pure Vanilla JS
