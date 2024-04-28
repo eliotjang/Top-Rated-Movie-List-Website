@@ -11,9 +11,9 @@
 
 ### Main source code Implementation
 
-- [main.js](https://github.com/eliotjang/Top-Rated-Movie-List-Website/main.js)
-- [index.html](https://github.com/eliotjang/Top-Rated-Movie-List-Website/index.html)
-- [style.css](https://github.com/eliotjang/Top-Rated-Movie-List-Website/style.css)
+- [main.js](https://github.com/eliotjang/Top-Rated-Movie-List-Website/blob/main/main.js)
+- [index.html](https://github.com/eliotjang/Top-Rated-Movie-List-Website/blob/main/index.html)
+- [style.css](https://github.com/eliotjang/Top-Rated-Movie-List-Website/blob/main/style.css)
 
 ### Project Design
 
