@@ -13,6 +13,11 @@
 - Implement Movie ID alert & Movie overview modal popup
 - Only use arrow function
 
+### Additional features to be implemented
+
+- pagination feature
+- genre navigation bar
+
 ### Main source code Implementation
 
 - [main.js](https://github.com/eliotjang/Top-Rated-Movie-List-Website/blob/main/main.js)
