@@ -1,118 +1,118 @@
 body {
-    background-color:rgb(12, 11, 11);
+  background-color: rgb(12, 11, 11);
 }
 
 h1 {
-    font-size: 250%;
-    color: whitesmoke;
-    text-align: center;
-    margin: 50px;
+  font-size: 250%;
+  color: whitesmoke;
+  text-align: center;
+  margin: 50px;
 }
 
 h3 {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 p {
-    color: whitesmoke;
-    font-family: courier;
-    font-size: 100%;
+  color: whitesmoke;
+  font-family: courier;
+  font-size: 100%;
 }
 
 /* 영화 포스터 이미지와 카드 상단 간격 조정 */
-#print_movie_data article img {
-    margin-top: 20px;
+#printMovieData article img {
+  margin-top: 20px;
 }
 
 /* 영화 카드 리스트 출력을 위한 div 간격 조정 */
 /* CSS Flex 레이아웃 적용 */
-#print_movie_data {
-    /* border: 2px solid skyblue; */
-    /* 가로로 카드 배치 */
-    display:flex;
-    /* 카드 사이에 동일한 간격 설정 */
-    justify-content: space-around;
-    /* 카드를 여러 줄에 걸쳐 정렬 */
-    flex-wrap: wrap;
+#printMovieData {
+  /* border: 2px solid skyblue; */
+  /* 가로로 카드 배치 */
+  display: flex;
+  /* 카드 사이에 동일한 간격 설정 */
+  justify-content: space-around;
+  /* 카드를 여러 줄에 걸쳐 정렬 */
+  flex-wrap: wrap;
 }
 
 /* 카드간 간격 조정 */
-.each_card {
-    /* border: 2px solid whitesmoke; */
-    transition: 0.3s;
-    padding: 2px 16px;
-    margin: 1em;
-    /* width: 500px; */
-    display:grid;
-    /* CSS Grid 레이아웃 적용 */
-/*     grid-template-columns: 210px 200px;
+.eachCard {
+  /* border: 2px solid whitesmoke; */
+  transition: 0.3s;
+  padding: 2px 16px;
+  margin: 1em;
+  /* width: 500px; */
+  display: grid;
+  /* CSS Grid 레이아웃 적용 */
+  /*     grid-template-columns: 210px 200px;
     grid-template-rows: 180px 170px; */
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
-.each_card img {
-    border-radius: 8px;
+.eachCard img {
+  border-radius: 8px;
 }
 
 /* 카드에 마우스 오버 시 그림자 생성 */
-.each_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.eachCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* 검색 창 출력을 위한 div 중앙 정렬 및 title과 간격 조정 */
-#search_bar_head {
-    text-align: center;
-    margin-bottom: 20px;
+#searchBarHead {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* 검색창 크기 조정 및 중앙 정렬 */
 input {
-    text-align: center;
-    height: 30px;
-    width: 500px;
+  text-align: center;
+  height: 30px;
+  width: 500px;
 }
 
 /* 검색창 */
-#search_bar_body{
-    border: none;
-    background: whitesmoke;
-    margin: 80px 2px 50px 0px;
-    font-size: 18px;
-    width: 20%;
-    border-radius: 6px;
-    padding: 5px;
-    color: black;
+#searchBarBody {
+  border: none;
+  background: whitesmoke;
+  margin: 80px 2px 50px 0px;
+  font-size: 18px;
+  width: 20%;
+  border-radius: 6px;
+  padding: 5px;
+  color: black;
 }
 
 /* 버튼창 */
-#search_btn{
-    background-color: whitesmoke;
-    padding: 5px;
-    width: 60px;
-    height: 43px;
-    border-radius: 6px;
+#searchBtn {
+  background-color: whitesmoke;
+  padding: 5px;
+  width: 60px;
+  height: 43px;
+  border-radius: 6px;
 }
 
 /* 전체화면 대비 모달창 크기 */
 .modal {
-    display: none;
-    justify-content:center;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 /* 모달창 내부 */
-.modal_body {
-    position: fixed;
-    top: 20%;
-    width: 400px;
-    height: auto;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px 0 silver;
-    transform: translateY(-10%);
-    background-color: black;
-    color:whitesmoke;
+.modalBody {
+  position: fixed;
+  top: 20%;
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px 0 silver;
+  transform: translateY(-10%);
+  background-color: black;
+  color: whitesmoke;
 }

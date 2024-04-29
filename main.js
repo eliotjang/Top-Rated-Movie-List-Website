@@ -1,6 +1,6 @@
 'use strict';
-const printMovies = document.querySelector('#print_movie_data');
-const printSearch = document.querySelector('#search_bar_head');
+const printMovies = document.querySelector('#printMovieData');
+const printSearch = document.querySelector('#searchBarHead');
 const modal = document.querySelector('.modal');
 
 
@@ -37,18 +37,18 @@ let movieData = response => {
         cardListHtml =
             cardListHtml +
             `
-            <article class="each_card">
+            <article class="eachCard">
                 <div>
                     <img src="https://image.tmdb.org/t/p/w200${element.poster_path}">
                 </div>
-                <div class="movie_details">
-                    <h3 style='display:none;' class="movie_name">${element.title}</h3>
+                <div class="movieDetails">
+                    <h3 style='display:none;' class="movieName">${element.title}</h3>
                 </div>
             </article>
             `;
         printMovies.innerHTML = cardListHtml;
 
-        const eachCard = document.querySelectorAll('.each_card');
+        const eachCard = document.querySelectorAll('.eachCard');
 
         // 카드 클릭시 영화 ID alert 창 출력
         eachCard.forEach((card, cardIdx) => {
@@ -69,8 +69,8 @@ let movieData = response => {
                 <p>Rating : ${response.results[cardIdx].vote_average.toFixed(1)}</p>
                 `;
 
-                const modal_body = document.querySelector('.modal_body');
-                modal_body.innerHTML += movieDetailsHtml;
+                const modalBody = document.querySelector('.modalBody');
+                modalBody.innerHTML += movieDetailsHtml;
 
                 modal.style.display = 'flex';
             });
@@ -79,8 +79,8 @@ let movieData = response => {
         // 카드에 마우스 아웃 시 모달창 팝업 아웃
         eachCard.forEach((card) => {
             card.addEventListener('mouseleave', () => {
-                const modal_body = document.querySelector('.modal_body');
-                modal_body.innerHTML = ``;
+                const modalBody = document.querySelector('.modalBody');
+                modalBody.innerHTML = ``;
                 modal.style.display = 'none';
             });
         });
@@ -88,7 +88,7 @@ let movieData = response => {
 
     // 검색 창 생성 및 웹페이지 출력
     const addSearchBar = document.createElement('input');
-    addSearchBar.setAttribute('id', 'search_bar_body');
+    addSearchBar.setAttribute('id', 'searchBarBody');
     addSearchBar.setAttribute('type', 'text');
     addSearchBar.setAttribute('onkeypress', 'handle(event)');
     addSearchBar.setAttribute('placeholder', 'Search for Movies...');
@@ -99,11 +99,11 @@ let movieData = response => {
 
     // 영화 이름 검색 시 해당 문자열 포함된 영화 웹페이지 출력
     searchMovieData = () => {
-        const value = document.getElementById('search_bar_body').value.toUpperCase();
-        const cardData = document.getElementsByClassName('each_card');
+        const value = document.getElementById('searchBarBody').value.toUpperCase();
+        const cardData = document.getElementsByClassName('eachCard');
         let movieName;
         for (let i = 0; i < cardData.length; i++) {
-            movieName = cardData[i].getElementsByClassName("movie_name");
+            movieName = cardData[i].getElementsByClassName("movieName");
             if (movieName[0].innerHTML.toUpperCase().indexOf(value) > -1) {
                 cardData[i].style.display = "block";
             } else {
@@ -114,7 +114,7 @@ let movieData = response => {
 
     // 검색 버튼 생성 및 버튼 클릭 시 해당 문자열 포함된 영화 웹페이지 출력
     const addSearchBtn = document.createElement('button');
-    addSearchBtn.setAttribute('id', 'search_btn');
+    addSearchBtn.setAttribute('id', 'searchBtn');
     addSearchBtn.setAttribute('onclick', 'searchMovieData()');
     addSearchBtn.append('Search');
     printSearch.appendChild(addSearchBtn);
