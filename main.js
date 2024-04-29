@@ -104,7 +104,9 @@ let movieData = response => {
         cardData = document.getElementsByClassName('each_card');
         for (i = 0; i < cardData.length; i++) {
             movieName = cardData[i].getElementsByClassName("movie_name");
-            if (!(movieName[0].innerHTML.toUpperCase().indexOf(value) > -1)) {
+            if (movieName[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+                cardData[i].style.display = "block";
+            } else {
                 cardData[i].style.display = "none";
             }
         }
