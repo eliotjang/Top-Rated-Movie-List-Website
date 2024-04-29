@@ -99,10 +99,10 @@ let movieData = response => {
 
     // 영화 이름 검색 시 해당 문자열 포함된 영화 웹페이지 출력
     searchMovieData = () => {
-        let value, movieName, cardData, i;
-        value = document.getElementById('search_bar_body').value.toUpperCase();
-        cardData = document.getElementsByClassName('each_card');
-        for (i = 0; i < cardData.length; i++) {
+        const value = document.getElementById('search_bar_body').value.toUpperCase();
+        const cardData = document.getElementsByClassName('each_card');
+        let movieName;
+        for (let i = 0; i < cardData.length; i++) {
             movieName = cardData[i].getElementsByClassName("movie_name");
             if (movieName[0].innerHTML.toUpperCase().indexOf(value) > -1) {
                 cardData[i].style.display = "block";
